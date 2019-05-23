@@ -33,7 +33,26 @@ public class Specialist {
 
 	@Size(min = 1, max = 2000)
 	private String resumen;
+	
+	@Column(length = 4)
+	private String yearBirth;
+	
 
+
+	/**
+	 * @return the yearBirth
+	 */
+	public String getYearBirth() {
+		return yearBirth;
+	}
+
+
+	/**
+	 * @param yearBirth the yearBirth to set
+	 */
+	public void setYearBirth(String yearBirth) {
+		this.yearBirth = yearBirth;
+	}
 
 	@NotNull
 	private List<String> habilities;
