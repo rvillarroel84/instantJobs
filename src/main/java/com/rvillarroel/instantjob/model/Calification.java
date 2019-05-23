@@ -32,6 +32,25 @@ public class Calification {
 	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "specialist_fk")
 	private Set<Specialist> specialist = new HashSet<>();
+	
+	@Size(min= 1, max = 5)
+	private Long stars;
+
+
+	/**
+	 * @return the stars
+	 */
+	public Long getStars() {
+		return stars;
+	}
+
+
+	/**
+	 * @param stars the stars to set
+	 */
+	public void setStars(Long stars) {
+		this.stars = stars;
+	}
 
 
 	/**
