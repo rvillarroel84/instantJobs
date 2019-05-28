@@ -1,17 +1,17 @@
 package com.rvillarroel.instantjob.model;
 
-//import java.util.Date;
-import java.util.HashSet;
+import java.util.Date;
+//import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
+//import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-//import javax.persistence.Temporal;
-//import javax.persistence.TemporalType;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -25,13 +25,13 @@ public class Calification {
 	@Size(min= 1, max = 5)
 	private Long calificacion;
 	
-	/*@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date publicationDate;
-	*/
 	
-	@OneToMany(cascade = CascadeType.PERSIST)
+	
+	/*@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "specialist_fk")
-	private Set<Specialist> specialist = new HashSet<>();
+	private Set<Specialist> specialist = new HashSet<>();*/
 	
 	@Size(min= 1, max = 5)
 	private Long stars;
@@ -64,7 +64,7 @@ public class Calification {
 		this.id = id;
 		this.calificacion = calificacion;
 		//this.publicationDate = publicationDate;
-		this.specialist = specialist;
+		//this.specialist = specialist;
 	}
 
 
@@ -103,35 +103,35 @@ public class Calification {
 	/**
 	 * @return the publicationDate
 	 */
-	/*
+	
 	public Date getPublicationDate() {
 		return publicationDate;
-	}*/
+	}
 
 
 	/**
 	 * @param publicationDate the publicationDate to set
 	 */
-	/*
+	
 	public void setPublicationDate(Date publicationDate) {
 		this.publicationDate = publicationDate;
-	}*/
+	}
 
 
 	/**
 	 * @return the specialist
 	 */
-	public Set<Specialist> getSpecialist() {
-		return specialist;
-	}
+	//public Set<Specialist> getSpecialist() {
+	//	return specialist;
+	//}
 
 
 	/**
 	 * @param specialist the specialist to set
 	 */
-	public void setSpecialist(Set<Specialist> specialist) {
-		this.specialist = specialist;
-	}
+	//public void setSpecialist(Set<Specialist> specialist) {
+	//	this.specialist = specialist;
+	//}
 	
 	public Calification() {
 		
